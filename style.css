@@ -1,0 +1,2481 @@
+/* Добавление шрифтов */
+@font-face {
+    src: url('assets/fonts/CoolveticaOFFICIALREMAKE-Regular.otf');
+    font-family: Coolvetica;
+}
+
+@font-face {
+    src: url('assets/fonts/snellroundhand_bold.otf');
+    font-family: Snell;
+}
+
+@font-face {
+    src: url('assets/fonts/Montserrat-Regular.ttf');
+    font-family: Montserrat-Regular;
+}
+
+@font-face {
+    src: url('assets/fonts/Montserrat-Medium.ttf');
+    font-family: Montserrat-Medium;
+}
+
+@font-face {
+    src: url('assets/fonts/Montserrat-SemiBold.ttf');
+    font-family: Montserrat-Semibold;
+}
+
+@font-face {
+    src: url('assets/fonts/Montserrat-Bold.ttf');
+    font-family: Montserrat-Bold;
+}
+
+@font-face {
+    src: url('assets/fonts/SyncopateRus.ttf');
+    font-family: Syncopate;
+}
+
+
+/* Базовые настройки */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 0.5s;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.mobile {
+    display: none;
+}
+
+/* Заливка фона */
+.mainPage {
+    background-color: #2C1C0B;
+    padding-bottom: 200px;
+}
+
+.white {
+    background-color: white;
+}
+
+.mainPage .white {
+    padding-top: 120px;
+    padding-bottom: 160px;
+    margin-bottom: 140px;
+}
+
+/* Контейнер */
+.cont {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* Стили заголовков */
+.title, .titleBrown {
+    font-size: 40px;
+    font-family: Coolvetica;
+    color: white;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.titleBrown {
+    color: #2C1C0B;
+}
+
+/* ГЛАВНАЯ СТРАНИЦА */
+
+/* Шапка и баннер */
+.bannerImage {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 120px;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 240px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo, footer .logo {
+    display: flex;
+    gap: 20px;
+}
+
+header .logo img, footer .logo img {
+    width: 50px;
+}
+
+header .logo h1, footer .logo h1 {
+    font-family: Syncopate;
+    font-size: 24px;
+    color: #FFE0B5;
+    font-weight: normal;
+}
+
+header nav {
+    display: flex;
+    gap: 80px;
+}
+
+header nav a {
+    color: #FFE0B5;
+    font-size: 16px;
+    font-family: Montserrat-Medium;
+}
+
+header nav a:hover {
+    transform: scale(0.95);
+}
+
+header svg.mobile {
+    display: none;
+}
+
+.headerOptions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerOption {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #FFE0B5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.headerOptions .headerOption svg {
+    width: 30px;
+    height: 30px;
+}
+
+.headerOption:hover {
+    background-color: #FFE0B5;
+}
+
+.headerOption:hover svg {
+    fill: #2C1C0B;
+}
+
+.bannerBlock {
+    width: 100%;
+}
+
+.bannerBlock h1 {
+    font-weight: normal;
+    color: white;
+    font-size: 46px;
+    font-family: Coolvetica;
+    margin-bottom: 10px;
+}
+
+.bannerBlock h1 span {
+    font-family: Snell;
+    font-size: 50px;
+}
+
+.bannerBlock p {
+    font-family: Montserrat-Regular;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 60px;
+    width: 700px;
+    line-height: 130%;
+}
+
+.bannerBlock a {
+    padding: 15px 40px;
+    background: linear-gradient(to right, #3C250F, #503417);
+    border-radius: 10px;
+    color: white;
+    border: 1px solid transparent;
+    font-family: Montserrat-Medium;
+    font-size: 20px;
+}
+
+.bannerBlock a:hover {
+    border: 1px solid white;
+}
+
+/* Блок «Все для читателя» */
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 140px;
+    gap: 20px;
+}
+
+.feature {
+    background-color: #3C250F;
+    border-radius: 20px;
+    padding: 40px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature h1 {
+    font-size: 24px;
+    color: white;
+    font-weight: normal;
+    font-family: Montserrat-Semibold;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 18px;
+    color: white;
+    font-family: Montserrat-Regular;
+    margin-bottom: 40px;
+}
+
+.featureSVG {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+/* Подборки */
+.collectionsBlock {
+    margin-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.collections {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+    margin-left: calc((100vw - 1340px) / 2);
+}
+
+.collection {
+    background: linear-gradient(#623D18, #503417);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+    width: 1320px;
+}
+
+.collection:hover {
+    transform: scale(1.01);
+}
+
+.collection img {
+    width: 600px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.collectionBlock {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.collectionText {
+    font-weight: normal;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.collectionText h1 {
+    font-weight: normal;
+    font-size: 24px;
+    font-family: Montserrat-Semibold;
+}
+
+.collectionText p {
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 26px;
+    margin-bottom: 10px;
+    opacity: 80%;
+}
+
+.collectionText h2 {
+    font-weight: normal;
+    font-size: 18px;
+    font-family: Montserrat-Medium;
+}
+
+.viewCollection {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
+}
+
+.viewCollection h3 {
+    font-weight: normal;
+    font-size: 18px;
+    color: white;
+    font-family: Montserrat-Semibold;
+}
+
+.viewCollection svg {
+    width: 26px;
+}
+
+.collectionsOptions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collectionsSlide {
+    display: flex;
+    gap: 5px;
+}
+
+.collectionsArrow {
+    background-color: white;
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.collectionsArrow svg {
+    width: 40px;
+}
+
+.collectionsOptions a {
+    font-size: 20px;
+    color: white;
+    font-family: Montserrat-Semibold;
+    border-bottom: 2px solid transparent;
+}
+
+.collectionsOptions a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Книги */
+.booksBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 140px;
+}
+
+.books {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 60px;
+}
+
+.book {
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book img {
+    height: 400px;
+    border-radius: 5px;
+    border: 3px solid #2C1C0B;
+}
+
+.book h1 {
+    font-weight: normal;
+    color: #2C1C0B;
+    font-size: 24px;
+    font-family: Montserrat-Semibold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.book p {
+    font-size: 20px;
+    color: #2C1C0B;
+    font-family: Montserrat-Regular;
+}
+
+.bookSocial {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bookRating, .bookReviews {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bookRating h2, .bookReviews h2 {
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    color: #2C1C0B;
+}
+
+.bookRating svg, .bookReviews svg {
+    width: 20px;
+}
+
+.bookOptions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.bookOptions a, .bookOptions button {
+    height: 50px;
+    background: linear-gradient(#835425, #3C250F);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.bookOptions a:hover, .bookOptions button:hover {
+    transform: scale(0.95);
+}
+
+.bookOptions button {
+    width: 50px;
+    cursor: pointer;
+}
+
+.bookOptions a {
+    width: 81%;
+    color: white;
+    font-size: 20px;
+    font-family: Montserrat-Medium;
+}
+
+.allBooks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.allBooks:hover {
+    left: 5px;
+}
+
+.allBooks h1 {
+    font-weight: normal;
+    font-size: 24px;
+    font-family: Montserrat-Semibold;
+    color: #2C1C0B;
+}
+
+.allBooks svg {
+    width: 30px;
+}
+
+/* Авторы */
+.authorsBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.authors {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 60px;
+}
+
+.author {
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.author img {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    border: 5px solid #3C250F;
+    object-fit: cover;
+}
+
+.author h1 {
+    font-weight: normal;
+    font-size: 24px;
+    font-family: Montserrat-Semibold;
+    color: #2C1C0B;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.author p {
+    font-size: 18px;
+    color: #2C1C0B;
+    font-family: Montserrat-Regular;
+    margin-bottom: 20px;
+}
+
+.author a {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(#835425, #3C250F);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: Montserrat-Regular;
+    text-align: center;
+}
+
+.author a:hover {
+    transform: scale(0.95);
+}
+
+/* Подвал */
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .logo {
+    margin-bottom: 20px;
+}
+
+footer .logo h1 {
+    color: white;
+}
+
+.copyright p, footer nav a, .contacts p {
+    font-size: 20px;
+    font-family: Montserrat-Medium;
+    color: white;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer nav a:hover, .socialMedia svg:hover {
+    transform: scale(0.95);
+}
+
+.contacts p {
+    margin-bottom: 40px;
+}
+
+.socialMedia {
+    display: flex;
+    gap: 10px;
+}
+
+.socialMedia svg {
+    cursor: pointer;
+    width: 50px;
+}
+
+/* СТРАНИЦА РЕГИСТРАЦИИ */
+.headerBlock {
+    background-color: #2C1C0B;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.headerBlock {
+    margin-bottom: 60px;
+}
+
+.reg {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    width: 100%;
+    justify-content: center;
+}
+
+.reg form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reg .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.reg .fields .label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reg .fields label {
+    font-size: 20px;
+    color: #3C250F;
+    font-family: Montserrat-Semibold;
+}
+
+.reg .fields input {
+    border: 1px solid #2C1C0B;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 500px;
+    color: #3C250F;
+    font-size: 16px;
+    font-family: Montserrat-Regular;
+    outline: none;
+}
+
+.reg .fields input::placeholder {
+    opacity: 50%;
+}
+
+.regOptions {
+    display: flex;
+    gap: 10px;
+}
+
+.regOptions button {
+    width: 245px;
+    background-color: #623D18;
+    border-radius: 10px;
+    font-family: Montserrat-Medium;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.regOptions button:last-child {
+    background-color: #3C250F;
+}
+
+.regOptions button:hover {
+    transform: scale(0.95);
+}
+
+.reg svg {
+    width: 300px;
+}
+
+.footerBlock {
+    margin-top: 160px;
+    background-color: #2C1C0B;
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+/* СТРАНИЦА КАТАЛОГА КНИГ */
+.booksHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.booksHeader h1 {
+    margin-bottom: 0;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filters input, .filters select {
+    border: 1px solid #503417;
+    border-radius: 100px;
+    padding: 8px 20px;
+    width: 250px;
+    outline: none;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    color: #503417;
+}
+
+.filters select {
+    width: 160px;
+}
+
+.filters input::placeholder {
+    opacity: 50%;
+}
+
+.filters a {
+    color: white;
+    font-size: 18px;
+    padding: 8px 20px;
+    font-family: Montserrat-Medium;
+    border-radius: 10px;
+    background-color: #503417;
+}
+
+.filters a:hover {
+    transform: scale(0.95);
+}
+
+/* СТРАНИЦА ОДНОЙ КНИГИ */
+.novel {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 120px;
+}
+
+.novel img {
+    width: 400px;
+    border: 3px solid #3C250F;
+    border-radius: 5px;
+}
+
+.novelInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.novelInfo p {
+    font-size: 18px;
+    color: #2C1C0B;
+    font-family: Montserrat-Regular;
+    line-height: 26px;
+}
+
+.chars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+
+.char {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.char h2 {
+    font-family: Montserrat-Semibold;
+    font-size: 20px;
+    color: #3C250F;
+    font-weight: normal;
+}
+
+.char h3 {
+    font-family: Montserrat-Regular;
+    font-size: 20px;
+    color: #3C250F;
+    font-weight: normal;
+}
+
+.novel .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.novelOptions {
+    display: flex;
+    gap: 20px;
+}
+
+.novelOptions a {
+    padding: 15px 30px;
+    background: linear-gradient(#835425, #3C250F);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Montserrat-Medium;
+    color: white;
+}
+
+.novelOptions a:hover {
+    transform: scale(0.95);
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.reviewsHeader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.reviewsHeader h1 {
+    margin-bottom: 0;
+}
+
+.reviewsHeader h2 {
+    font-weight: normal;
+    font-size: 20px;
+    color: #835425;
+    font-family: Montserrat-Regular;
+}
+
+.review {
+    background: linear-gradient(#835425, #3C250F);
+    border-radius: 20px;
+    width: 100%;
+    padding: 30px;
+}
+
+.reviewHead {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reviewHead .stars {
+    display: flex;
+    gap: 5px;
+}
+
+.reviewHead .stars svg {
+    width: 16px;
+}
+
+.reviewHead img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.reviewHead h1 {
+    font-weight: normal;
+    color: white;
+    font-size: 20px;
+    font-family: Montserrat-Medium;
+    margin-right: 10px;
+}
+
+.review p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    font-family: Montserrat-Regular;
+    line-height: 24px;
+    opacity: 90%;
+}
+
+/* СТРАНИЦА ПОДБОРОК */
+.collectionsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.collectionsHeader h1 {
+    margin-bottom: 0;
+}
+
+.collectionsPage .collections, .manageCollectionsPage .collections  {
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* СТРАНИЦА ОДНОЙ ПОДБОКИ */
+.collectionPage {
+    background-color: #2C1C0B;
+}
+
+.collectionPage .headerBlock {
+    margin-bottom: 20px;
+}
+
+.coll {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 60px;
+}
+
+.coll img {
+    width: 100%;
+    filter: brightness(0.4);
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.collInfo {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    right: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.collInfo h1 {
+    margin-bottom: 20px;
+}
+
+.collInfo p {
+    font-size: 18px;
+    line-height: 26px;
+    color: white;
+    font-family: Montserrat-Regular;
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+.collChars {
+    display: flex; 
+    gap: 20px;
+}
+
+.collChars h2 {
+    font-weight: normal;
+    color: White;
+    font-size: 18px;
+    font-family: Montserrat-Medium;
+    margin-bottom: 40px;
+}
+
+.collInfo a {
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #2C1C0B;
+    font-family: Montserrat-Semibold;
+    width: fit-content;
+}
+
+.collInfo a:hover {
+    transform: scale(0.95);
+}
+
+.collectionPage .book h1, .collectionPage .book p, .collectionPage .bookSocial h2 {
+    color: white;
+}
+
+.collectionPage .bookSocial svg {
+    fill: white;
+}
+
+/* СТРАНИЦА С АВТОРАМИ */
+.authorsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.authorsHeader h1 {
+    margin-bottom: 0;
+}
+
+/* СТРАНИЦА С ОДНИМ АВТОРОМ */
+.writer {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.writer img {
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 5px solid #3C250F;
+}
+
+.writerInfo h1 {
+    margin-bottom: 20px;
+}
+
+.writerInfo p {
+    font-size: 16px;
+    font-family: Montserrat-Regular;
+    color: #2C1C0B;
+    line-height: 26px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+/* ПРОФИЛЬ */
+
+.profilePage main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.profile .avatar {
+    width: 220px;
+    height: 220px;
+    background-color: #2C1C0B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.profile .avatar img {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile .avatarInput {
+    width: 210px;
+    height: 210px;
+    background-color: #2C1C0B;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile .avatar:hover .avatarInput {
+    background-color: #503417;
+}
+
+.profile .avatarInput p {
+    color: white;
+    font-size: 18px;
+    font-family: Montserrat-Medium;
+    text-align: center;
+}
+
+.profileInfo .profileName {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profileInfo .profileName h1 {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+.profileInfo .profileName h2 {
+    font-weight: normal;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 100px;
+    color: white;
+    font-family: Montserrat-Medium;
+    background: linear-gradient(#623D18, #3C250F);
+}
+
+.profileData {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profileData p {
+    font-size: 18px;
+    color: #3C250F;
+    font-family: Montserrat-Regular;
+}
+
+.profileOptions {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(#623D18, #2C1C0B);
+    font-family: Montserrat-Medium;
+    font-size: 18px;
+    color: white;
+}
+
+.button:hover {
+    transform: scale(0.95);
+}
+
+.redbutton {
+    border: 2px solid #ED0000;
+    color: #ED0000;
+    padding: 9px 19px;
+    font-family: Montserrat-Medium;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.redbutton:hover {
+    background-color: #ED0000;
+    color: white;
+}
+
+/* МОИ ПОДБОРКИ */
+.myCollectionsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.myCollectionsHeader h1 {
+    margin-bottom: 0;
+}
+
+.myCollection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.myCollection .collectionOptions {
+    display: flex;
+    gap: 10px;
+}
+
+.emptyCover {
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 600px;
+    aspect-ratio: 600/280;
+    background-color: #3C250F;
+    flex-shrink: 0;
+}
+
+.emptyCover p {
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    color: white;
+}
+
+/* СОЗДАНИЕ ПОДБОРКИ */
+.createCollectionPage main, .createBookPage main {
+    display: flex;
+    align-items: center;
+    gap: 280px;
+}
+
+.create {
+    width: 700px;
+}
+
+.createFields {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.createFields .field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.createFields .field label {
+    font-family: Montserrat-Semibold;
+    font-size: 20px;
+    color: #3C250F;
+}
+
+.createFields .field input, .createFields .field select, .createFields .field textarea {
+    border: 1px solid #3C250F;
+    border-radius: 10px;
+    color: #3C250F;
+    outline: none;
+    padding: 10px 20px;
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+}
+
+.createFields .field input::placeholder, .createFields .field textarea::placeholder {
+    color: #3C250F;
+    opacity: 50%;
+}
+
+.createFields .field textarea {
+    height: 140px;
+}
+
+.createFields .field.image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#imageInput {
+    display: none;
+}
+
+.imageInput {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.createFields .field .imageInput label {
+    font-size: 16px;
+    border: 1px solid #3C250F;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Montserrat-Regular;
+}
+
+.imageInput label:hover {
+    text-decoration: underline;
+}
+
+.imageInput p {
+    font-size: 16px;
+    font-family: Montserrat-Regular;
+    color: #3C250F;
+}
+
+.collBooks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.collBook {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collBook .bookAuthor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.collBook .bookAuthor h1, .collBook .bookAuthor h2 {
+    font-weight: normal;
+    font-family: Montserrat-Medium;
+    font-size: 16px;
+    color: #3C250F;
+}
+
+.collBook .bookAuthor h2 {
+    font-family: Montserrat-Regular;
+}
+
+.separateLine {
+    width: 100%;
+    height: 1px;
+    background-color: #3C250F;
+}
+
+.collBook .collBookSvg {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.collBook .collBookSvg:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.createFields .field a {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: Montserrat-Medium;
+    color: white;
+    background-color: #3C250F;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.createFields .field a:hover {
+    transform: scale(0.95);
+}
+
+.createOptions {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.createOptions button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-family: Montserrat-Medium;
+    background: linear-gradient(#835425, #503417);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.createOptions button:last-child {
+    background: linear-gradient(#623D18, #3C250F);
+}
+
+.createOptions button:hover {
+    transform: scale(0.95);
+}
+
+/* МОИ РЕЦЕНЗИИ */
+.myReviewsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.myReviewsHeader h1 {
+    margin-bottom: 0;
+}
+
+.myReviews {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.myReview {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.myReviewBody {
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(#623D18, #3C250F);
+
+}
+
+.myReviewHead {
+    display: flex;
+    gap: 20px;
+}
+
+.myReviewHead img {
+    height: 160px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.myReviewInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.myReviewInfo h1 {
+    font-weight: normal;
+    font-family: Montserrat-Semibold;
+    font-size: 20px;
+    color: white;
+}
+
+.myReviewInfo p {
+    font-size: 16px;
+    font-family: Montserrat-Regular;
+    color: white;
+}
+
+.myReviewInfo .rating {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.myReviewBody p {
+    font-size: 16px;
+    color: white;
+    font-family: Montserrat-Regular;
+    line-height: 24px;
+    opacity: 90%;
+}
+
+.myReviewOptions {
+    display: flex;
+    gap: 10px;
+}
+
+/* ПАНЕЛЬ УПРАВЛЕНИЯ: УПРАВЛЕНИЕ КНИГАМИ */
+.manageTabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.manageTabs a {
+    color: #3C250F;
+    font-family: Montserrat-Medium;
+    font-size: 18px;
+    border: 2px solid #3C250F;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.manageTabs a:hover, .manageTabs a.active {
+    background-color: #3C250F;
+    color: white;
+}
+
+.manageBooksPage .filters, .manageCollectionsPage .filters,.manageAuthorsPage .filters, .manageCollectionsPage .filters,.manageReviewsPage .filters {
+    margin-bottom: 40px;
+}
+
+.manageBooksPage .bookOptions {
+    margin-top: 20px;
+}
+
+.manageAuthorsPage .bookOptions {
+    margin-top: 10px;
+}
+
+.manageBooksPage .bookOptions button, .manageAuthorsPage .bookOptions button {
+    background: none;
+    border: 2px solid #ED0000;
+}
+
+.manageBooksPage .bookOptions button:hover, .manageAuthorsPage .bookOptions button:hover {
+    background-color: #ED0000;
+    transform: none;
+}
+
+.manageBooksPage .bookOptions button svg, .manageAuthorsPage .bookOptions button svg {
+    width: 34px;
+}
+
+.manageBooksPage .bookOptions button:hover svg, .manageAuthorsPage .bookOptions button:hover svg {
+    fill: white;
+}
+
+/* ДОБАВЛЕНИЕ КНИГИ */
+.doubleField {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.doubleField .field {
+    width: 100%;
+}
+
+/* УПРАВЛЕНИЕ ПОДБОРКАМИ */
+.manageCollectionsPage .collectionOptions {
+    margin-top: 10px;
+    gap: 10px;
+    display: flex;
+}
+
+/* ДОБАВЛЕНИЕ АВТОРА */
+.years {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.year {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.year p {
+    font-family: Montserrat-Regular;
+    font-size: 18px;
+    color: #3C250F;
+}
+
+.year input {
+    width: 100%;
+}
+
+/* УПРАВЛЕНИЕ РЕЦЕНЗИЯМИ */
+.manageReviewsPage .myReviewBody h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-family: Montserrat-Medium;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.manageReviewsPage .myReviewOptions {
+    display: flex;
+    gap: 10px;
+}
+
+/* АДАПТИВ ПОД ТЕЛЕФОН */
+@media screen and (max-width: 500px) {
+    .cont {
+        max-width: 352px;
+    }
+
+    .mainPage {
+        padding-bottom: 60px;
+    }
+
+    .mainPage .white {
+        padding-top: 40px;
+        padding-bottom: 100px;
+        margin-bottom: 80px;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .title, .titleBrown {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .banner {
+        gap: 120px;
+    }
+
+    header nav, .headerOptions {
+        display: none;
+    }
+
+    header svg.mobile {
+        display: block;
+    }
+
+    header .logo, footer .logo {
+        gap: 10px;
+    }
+
+    header .logo img, footer .logo img {
+        width: 40px;
+    }
+
+    header .logo h1, footer .logo h1 {
+        font-size: 16px;
+        margin-top: 1px;
+    }
+
+    .bannerImage {
+        width: 100%;
+        object-fit: cover;
+        height: 500px;
+        margin-bottom: 60px;
+    }
+
+    .bannerBlock h1 {
+        font-size: 26px;
+    }
+
+    .bannerBlock h1 span {
+        font-family: Coolvetica;
+        font-size: 26px;
+    }
+
+    .bannerBlock p {
+        margin-bottom: 30px;
+    }
+
+    .bannerBlock p, .bannerBlock a {
+        font-size: 16px;
+    }
+
+    .bannerBlock a {
+        padding: 10px 20px;
+    }
+
+    .features {
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+
+    .feature {
+        width: 100%;
+        padding: 30px 30px 0 30px;
+    }
+
+    .feature h1 {
+        font-size: 20px;
+    }
+
+    .feature p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .featureSVG svg {
+        width: 110px;
+        height: auto;
+    }
+
+    .collectionsBlock {
+        margin-bottom: 80px;
+    }
+
+    .collections {
+        width: 100%;
+        flex-wrap: wrap;
+        max-width: 352px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .collection, .collection img {
+        width: 100%;
+    }
+
+    .collection {
+        flex-direction: column;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .collection img {
+        width: 100%;
+        height: auto;
+    }
+
+    .collectionText {
+        gap: 10px;
+    }
+
+    .collectionBlock h1 {
+        font-size: 18px;
+    }
+
+    .collectionBlock p {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: justify;
+    }
+
+    .collectionBlock h2 {
+        font-size: 16px;
+    }
+
+    .collectionText a {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: Montserrat-Medium;
+        color: #3C250F;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .collectionsOptions {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .collectionsOptions a {
+        font-size: 18px;
+        font-family: Montserrat-Medium;
+    }
+
+    .collectionsOptions svg {
+        width: 20px;
+    }
+
+    .booksBlock {
+        gap: 20px;
+        margin-bottom: 80px;
+    }
+
+    .books {
+        gap: 10px;
+        row-gap: 40px;
+    }
+
+    .book {
+        width: 48%;
+    }
+
+    .book img {
+        height: 216px;
+        border-radius: 3px;
+    }
+
+    .bookInfo h1 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .bookInfo p, .bookSocial h2 {
+        font-size: 12px;
+    }
+
+    .bookSocial {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .bookSocial svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .bookOptions {
+        gap: 5px;
+    }
+
+    .bookOptions a {
+        font-size: 14px;
+        height: 32px;
+        border-radius: 5px;
+    }
+
+    .bookOptions button {
+        height: 32px;
+        border-radius: 5px;
+    }
+
+    .bookOptions svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .allBooks h1 {
+        font-size: 18px;
+        font-family: Montserrat-Medium;
+    }
+
+    .allBooks svg {
+        width: 20px;
+    }
+
+    .authorsBlock {
+        gap: 20px;
+    }
+
+    .authors {
+        gap: 10px;
+        row-gap: 40px;
+    }
+
+    .author {
+        width: 48.5%;
+    }
+
+    .author img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .author h1 {
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .author p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .author a {
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    footer.mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    footer.mobile .logo {
+        margin-bottom: 0;
+    }
+
+    footer.mobile nav {
+        gap: 20px;
+        align-items: center;
+    }
+
+    footer.mobile nav a {
+        font-size: 18px;
+    }
+
+    footer.mobile .email {
+        font-family: Montserrat-Medium;
+        color: white;
+        font-size: 18px;
+    }
+
+    footer.mobile .authorRight {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    footer.mobile .authorRight .separateLine {
+        background-color: white;
+        opacity: 50%;
+    }
+
+    footer.mobile .authorRight h3 {
+        opacity: 50%;
+        color: white;
+        font-family: MOntserrat-Regular;
+        font-size: 14px;
+    }
+
+    .reg form {
+        width: 100%;
+    }
+
+    .reg .fields {
+        width: 100%;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .reg .fields label {
+        font-size: 18px;
+    }
+
+    .reg .fields input {
+        border: 1px solid #2C1C0B;
+        border-radius: 10px;
+        padding: 10px 20px;
+        width: 100%;
+        font-size: 14px;
+
+    }
+
+    .regOptions {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .regOptions button {
+        width: 50%;
+        background-color: #623D18;
+        border-radius: 10px;
+        font-family: Montserrat-Medium;
+        color: white;
+        font-size: 20px;
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .regOptions button:last-child {
+        background-color: #3C250F;
+    }
+
+    .regOptions button:hover {
+        transform: scale(0.95);
+    }
+
+    .footerBlock {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .catHeader {
+        flex-direction: column;
+        align-items: start;
+        justify-content: unset;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    .catHeader .filters {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .catHeader .filters input, .catHeader .filters select , .catHeader .filters a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .catHeader .filters input {
+        width: 160px;
+    }
+
+    .catHeader .filters select {
+        width: 110px;
+    }
+
+    .catHeader .filters a {
+        border-radius: 5px;
+    }
+
+    .bookPage .titleBrown {
+        text-align: center;
+    }
+
+    .bookPage .headerBlock {
+        margin-bottom: 40px;
+    }
+
+    .novel {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .novel img {
+        width: 250px;
+        height: auto;
+    }
+
+    .novelInfo {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .novelInfo p {
+        font-size: 16px;
+        text-align: justify;
+        line-height: 22px;
+    }
+
+    .chars {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .chars .charName {
+        width: 100%;
+    }
+
+    .chars .charValue {
+        width: 100%;
+        align-items: end;
+    }
+
+    .chars h2, .chars h3 {
+        font-size: 16px;
+    }
+
+    .charValue h3 {
+        text-align: end;
+    }
+
+    .button, .novelOptions .button, .redbutton {
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .novelOptions {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .reviewsHeader {
+        margin-bottom: 20px;
+    }
+
+    .review p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .coll img {
+        filter: unset;
+    }
+
+    .collInfo {
+        position: unset;
+    }
+
+    .collInfo h1 {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .collInfo p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .collChars {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .collChars h2 {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .writer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .writer img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .writerInfo {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .writerInfo h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .writerInfo p {
+        margin-bottom: 20px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .profile .avatar {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile .avatarInput {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile .avatarInput p {
+        font-size: 16px;
+    }
+
+    .profileInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profileInfo .profileName {
+        margin-bottom: 10px;
+    }
+
+    .profileInfo .profileName h1 {
+        font-size: 26px;
+    }
+
+    .profileOptions {
+        flex-wrap: wrap;
+    }
+
+    .myCollection, .myCollection .emptyCover {
+        width: 100%;
+    }
+
+    .collectionOptions {
+        flex-wrap: wrap;
+    }
+
+    .create {
+        width: 100%;
+    }
+
+    .createFields .field label {
+        font-size: 18px;
+    }
+
+    .createFields .field input, .createFields .field select, .createFields .field textarea {
+        font-size: 14px;
+    }
+
+    .myReviewHead img {
+        width: 60px;
+        height: 96px;
+    }
+
+    .myReviewInfo {
+        gap: 5px;
+    }
+
+    .myReviewInfo h1 {
+        font-size: 16px;
+    }
+
+    .myReviewHead {
+        margin-bottom: 10px;
+    }
+
+    .myReviewBody p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .profile .avatar img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .manageTabs {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .manageTabs a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .doubleField {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .doubleField .field {
+        width: 100%;
+    }
+
+    .collectionBlock .emptyCover {
+        width: 100%;
+    }
+
+    .manageAuthorsPage .bookOptions a {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1100px) {
+
+    .mainPage .white {
+        padding-top: 80px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .tablet, .banner header svg, .headerBlock header svg {
+        display: block;
+    }
+
+    .cont {
+        max-width: 85%;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .bannerImage {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        margin-bottom: 80px;
+        max-height: 780px;
+    }
+
+    header .logo img {
+        width: 60px;
+    }
+
+    .banner header svg, .headerBlock header svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    header .logo h1, footer .logo h1 {
+        margin-top: 3px;
+    }
+
+    .banner {
+        gap: 200px;
+    }
+
+    .bannerBlock h1 {
+        font-size: 40px;
+    }
+
+    .bannerBlock h1 span {
+        font-size: 44px;
+    }
+
+    .bannerBlock p {
+        width: 80%;
+    }
+
+    .bannerBlock a {
+        font-size: 24px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .feature h1 {
+        font-size: 26px;
+    }
+
+    .feature p {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .feature .featureSVG svg {
+        width: 140px;
+        height: auto;
+    }
+
+    .collections {
+        flex-direction: column;
+        max-width: 85%;
+        margin: 0 auto;
+        gap: 30px;
+    }
+
+    .collection {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .collection img {
+        width: 100%;
+    }
+
+    .collectionText a {
+        width: 100%;
+        background-color: white;
+        font-size: 24px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        color: #3C250F;
+        font-family: Montserrat-Semibold;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .collectionsOptions {
+        justify-content: center;
+    }
+
+    .collectionsOptions a {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    footer.tablet {
+        display: flex;
+    }
+
+    footer .logo {
+        gap: 10px;
+    }
+
+    footer .logo img {
+        width: 40px;
+    }
+
+    footer .logo h1 {
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    footer .copyright p {
+        font-size: 16px;
+    }
+
+    footer nav a {
+        font-size: 18px;
+    }
+
+    footer .socialMedia svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .catHeader {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .novel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .novel img {
+        width: 50%;
+        height: fit-content;
+    }
+
+    .novelInfo {
+        gap: 40px;
+    }
+
+    .novelInfo p {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .chars {
+        width: 70%;
+    }
+
+    .novelOptions {
+        flex-wrap: wrap;
+    }
+
+    .chars h2, .chars h3 {
+        font-size: 20px;
+    }
+
+    .coll img {
+        height: 400px;
+    }
+
+    .collInfo {
+        left: 40px;
+    }
+
+    .collInfo h1 {
+        font-size: 32px;
+    }
+
+    .collInfo p {
+        width: 100%;
+    }
+
+    .writer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profileBlock {
+        width: 100%;
+    }
+
+    .profileOptions {
+        margin: 0;
+    }
+
+    .emptyCover {
+        width: 100%;
+    }
+
+    .collectionOptions {
+        flex-wrap: wrap;
+    }
+
+    .myReviewsHeader, .myReviews {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .myReviewsHeader {
+        margin-bottom: 40px;
+    }
+
+    .profileOptions {
+        flex-wrap: wrap;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .manageTabs, .filters {
+        flex-wrap: wrap;
+    }
+
+    .manageReviewsPage .myReviews {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
