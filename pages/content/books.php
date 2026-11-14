@@ -1,7 +1,20 @@
 <?php
-$sql = "SELECT * FROM books";
+$sql = "SELECT * FROM books WHERE 1=1";
+$params = [];
+
+if (!empty($_GET['search'])) {
+    $sql .= " AND title LIKE ?";
+    $searchTerm = "%" . $_GET['search'] . "%";
+    $params[] = $searchTerm;
+}
+
+if (!empty($_GET['genre'])) {
+    $sql .= " AND genre = ?";
+    $params[] = $_GET['genre'];
+}
+
 $stmt = $connect->prepare($sql);
-$stmt->execute([]);
+$stmt->execute($params);
 $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $sql = "SELECT * FROM genres";
@@ -23,18 +36,22 @@ if (isset($_POST['insert'])) {
         <div class="booksHeader catHeader cont">
             <h1 class="titleBrown">Книги</h1>
 
-            <div class="filters">
-                <input type="text" placeholder="Название книги...">
-                <select>
-                    <option disabled selected>Жанр</option>
+            <form method="get" class="filters">
+                <input type="hidden" name="page" value="books">
+                <input name="search" type="text" placeholder="Название книги..." <?php if(isset($_GET['search'])) { ?>value="<?= $_GET['search'] ?>"<?php } ?>>
+                <select name="genre">
+                    <option selected value="">Жанр</option>
                     <?php foreach ($genres as $g) { ?>
-                        <option><?= $g['name'] ?></option>
+                        <option value="<?= $g['name'] ?>" <?php if(isset($_GET['genre']) && $_GET['genre'] == $g['name']) { ?>selected<?php } ?>><?= $g['name'] ?></option>
                     <?php } ?>
                 </select>
-                <a href="#">Применить</a>
-            </div>
+                <button>Применить</button>
+            </form>
         </div>
 
+        <?php if(count($books) == 0) { ?>
+        <p class="empty cont">В нашей библиотеке нет такой книги!</p>
+        <?php } else { ?>
         <div class="books cont">
             <?php foreach ($books as $b) {
                 $sql = "SELECT * FROM reviews WHERE book_id = ? AND status = ?";
@@ -94,6 +111,7 @@ if (isset($_POST['insert'])) {
                 </div>
             <?php } ?>
         </div>
+        <?php } ?>
     </main>
 </body>
 

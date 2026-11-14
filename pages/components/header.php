@@ -39,7 +39,7 @@
                     </a>
                 </div>
             <?php } else { ?>
-                <div class="guestOptions">
+                <div class="guestOptions desktop">
                     <a href="?page=reg">Регистрация</a>
                     <a href="?page=login">Войти</a>
                 </div>

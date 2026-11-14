@@ -852,16 +852,18 @@ footer nav a:hover, .socialMedia svg:hover {
     opacity: 50%;
 }
 
-.filters a {
+.filters a, .filters button {
     color: white;
     font-size: 18px;
     padding: 8px 20px;
     font-family: Montserrat-Medium;
     border-radius: 10px;
     background-color: #503417;
+    border: none;
+    cursor: pointer;
 }
 
-.filters a:hover {
+.filters a:hover, .filters button:hover {
     transform: scale(0.95);
 }
 
@@ -2232,6 +2234,10 @@ footer nav a:hover, .socialMedia svg:hover {
         margin-top: 1px;
     }
 
+    .guestOptions {
+        display: none;
+    }
+
     .bannerImage {
         width: 100%;
         object-fit: cover;
@@ -2832,6 +2838,47 @@ footer nav a:hover, .socialMedia svg:hover {
     .manageAuthorsPage .bookOptions a {
         width: 75%;
     }
+
+    .modal {
+        width: 100vw;
+        height: 100vh;
+        z-index: 3;
+    }
+
+    .modal .titleBrown {
+        text-align: center;
+        line-height: 32px;
+    }
+
+    .genre {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .window {
+        max-height: 90%;
+        max-width: 90%;
+        padding: 30px;
+        padding-top: 50px;
+    }
+
+    .modal .window .modalOptions {
+        width: 100%;
+    }
+
+    .modal .meetModal p {
+        width: auto;
+        font-size: 16px;
+    }
+
+    .booklistModal {
+        width: auto;
+    }
+
+    .booklistModal .catHeader {
+        width: fit-content;
+        margin-top: 10px;
+    }
 }
 
 @media screen and (min-width: 501px) and (max-width: 1100px) {
@@ -2855,6 +2902,10 @@ footer nav a:hover, .socialMedia svg:hover {
     .title {
         font-size: 40px;
         margin-bottom: 20px;
+    }
+
+    .guestOptions {
+        display: none;
     }
 
     .burgerLabel {
@@ -2952,6 +3003,18 @@ footer nav a:hover, .socialMedia svg:hover {
 
     .collection img {
         width: 100%;
+    }
+
+    .collectionText span {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: Montserrat-Medium;
+        color: #3C250F;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 20px;
+        text-align: center;
     }
 
     .collectionText a {
@@ -3101,5 +3164,14 @@ footer nav a:hover, .socialMedia svg:hover {
     .manageReviewsPage .myReviews {
         width: 85%;
         margin: 0 auto;
+    }
+
+    .booklistModal {
+        width: auto;
+    }
+
+    .booklistModal .catHeader {
+        width: fit-content;
+        margin-top: 10px;
     }
 }
